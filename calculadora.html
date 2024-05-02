@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matrices</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazar el archivo CSS -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal -->
+        <h1>Calculadora de Matrices</h1>
+        
+        <!-- Elementos del formulario y resultados -->
+        <div>
+            <!-- Contenido del formulario para ingresar dimensiones y generar matrices -->
+            <label for="rows1">Filas Matriz 1:</label>
+            <input type="number" id="rows1" min="1"><br>
+            <label for="cols1">Columnas Matriz 1:</label>
+            <input type="number" id="cols1" min="1"><br>
+            <button onclick="createMatrix(1)">Generar Matriz 1</button>
+        </div>
+        
+        <div id="matrix-inputs" style="display: none;">
+            <h2>Matriz 1:</h2>
+            <div id="matrix1"></div>
+            
+            <h2>Matriz 2:</h2>
+            <div>
+                <label for="rows2">Filas Matriz 2:</label>
+                <input type="number" id="rows2" min="1"><br>
+                <label for="cols2">Columnas Matriz 2:</label>
+                <input type="number" id="cols2" min="1"><br>
+                <button onclick="createMatrix(2)">Generar Matriz 2</button>
+            </div>
+            <div id="matrix2"></div>
+            
+            <button onclick="multiplyMatrices()">Calcular Multiplicación</button>
+        </div>
+        
+        <div id="result" style="display: none;">
+            <h2>Matriz Resultante:</h2>
+            <table id="resultMatrix"></table>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Enlazar el archivo JavaScript -->
+</body>
+</html>
